@@ -151,6 +151,8 @@
     <ClCompile Include="lab5oop.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="ListItor.cpp" />
+    <ClCompile Include="ReverseListItor.cpp" />
+    <ClCompile Include="ReverseVectorItor.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="VectorItor.cpp" />
   </ItemGroup>
@@ -158,6 +160,8 @@
     <ClInclude Include="Itor.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="ListItor.h" />
+    <ClInclude Include="ReverseListItor.h" />
+    <ClInclude Include="ReverseVectorItor.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="VectorItor.h" />
   </ItemGroup>

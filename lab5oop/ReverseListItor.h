@@ -2,15 +2,16 @@
 #include "Itor.h"
 #include "List.h"
 
-template<class T> class ListItor : public Itor<T>
+template<class T>
+class ReverseListItor : public Itor<T>//realizaci9 List
 {
 public:
-	ListItor(List<T>& list);
+	ReverseListItor(List<T>& list);
 
 	T* first() override;
 	T* next() override;
 	bool end();
-	
+
 	virtual T& operator*();
 
 private:
@@ -19,36 +20,41 @@ private:
 };
 
 template <class T>
-ListItor<T>::ListItor(List<T>& list) : list(list), current(list.head)
+ReverseListItor<T>::ReverseListItor(List<T>& list) :
+	list(list), current(list.head)
 {
 }
 
 template <class T>
-T* ListItor<T>::first()
+T* ReverseListItor<T>::first()
 {
 	current = list.head;
+	while (current->next != nullptr)
+	{
+		current = current->next;
+	}
 	return current ? current->value : nullptr;
 }
 
 template <class T>
-T* ListItor<T>::next()
+T* ReverseListItor<T>::next()
 {
-	current = current->next;
+	current = current->prev;
 	return current ? current->value : nullptr;
 }
 
 template <class T>
-bool ListItor<T>::end()
+bool ReverseListItor<T>::end()
 {
 	if (current != nullptr)
 	{
 		return true;
-	}
+	}		
 	return false;
 }
 
 template <class T>
-T& ListItor<T>::operator*()
+T& ReverseListItor<T>::operator*()
 {
 	return *current->value;
 }

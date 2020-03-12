@@ -10,8 +10,9 @@ public:
 	public:
 		T* value;
 		Link* next;
-
-		Link(T* value, Link* next);
+		Link* prev;
+		
+		Link(T* value, Link* next, Link* prev);
 		~Link();
 	};
 
@@ -25,8 +26,8 @@ public:
 };
 
 template <class T>
-List<T>::Link::Link(T* value, Link* next) :
-	value(value), next(next)
+List<T>::Link::Link(T* value, Link* next, Link* prev) :
+	value(value), next(next), prev(prev)
 {
 }
 
@@ -51,7 +52,11 @@ List<T>::~List()
 template <class T>
 void List<T>::put(T* value)
 {
-	head = new Link(value, head);
+	head = new Link(value, head, nullptr);
+	if (head->next)
+	{
+		head->next->prev = head;
+	}
 }
 
 template <class T>
