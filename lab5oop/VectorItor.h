@@ -10,9 +10,7 @@ public:
 
 	T* first() override;
 	T* next() override;
-	bool end() const;
-
-	
+	bool end() override;
 	
 	virtual T& operator*();
 
@@ -40,7 +38,7 @@ T* VectorItor<T>::next()
 }
 
 template <class T>
-bool VectorItor<T>::end() const
+bool VectorItor<T>::end()
 {
 	if (index < elements.get_size()) 
 	{

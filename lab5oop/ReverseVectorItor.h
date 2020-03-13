@@ -7,10 +7,10 @@ class ReverseVectorItor : public Itor<T>
 {
 public:
 	ReverseVectorItor(Vector<T>& elements);
-
+	
 	T* first() override;
 	T* next() override;
-	bool end() const;
+	bool end() override;
 
 	virtual T& operator*();
 
@@ -46,7 +46,7 @@ T* ReverseVectorItor<T>::next()
 }
 
 template <class T>
-bool ReverseVectorItor<T>::end() const
+bool ReverseVectorItor<T>::end()
 {
 	if (index + 1 > 0)
 	{

@@ -9,7 +9,7 @@ public:
 
 	T* first() override;
 	T* next() override;
-	bool end();
+	bool end() override;
 	
 	virtual T& operator*();
 
