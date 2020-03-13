@@ -147,6 +147,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConstListItor.cpp" />
+    <ClCompile Include="ConstReverseListItor.cpp" />
+    <ClCompile Include="ConstReverseVectorItor.cpp" />
+    <ClCompile Include="ConstVectorItor.cpp" />
     <ClCompile Include="Itor.cpp" />
     <ClCompile Include="lab5oop.cpp" />
     <ClCompile Include="List.cpp" />
@@ -157,6 +161,10 @@
     <ClCompile Include="VectorItor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConstListItor.h" />
+    <ClInclude Include="ConstReverseListItor.h" />
+    <ClInclude Include="ConstReverseVectorItor.h" />
+    <ClInclude Include="ConstVectorItor.h" />
     <ClInclude Include="Itor.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="ListItor.h" />

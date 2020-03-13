@@ -14,7 +14,7 @@ public:
 
 	virtual T& operator*();
 
-private:
+protected:
 	Vector<T>& elements;
 	size_t index;
 };

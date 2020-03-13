@@ -3,7 +3,7 @@
 #include "List.h"
 
 template<class T>
-class ReverseListItor : public Itor<T>//realizaci9 List
+class ReverseListItor : public Itor<T>
 {
 public:
 	ReverseListItor(List<T>& list);
@@ -14,7 +14,7 @@ public:
 
 	virtual T& operator*();
 
-private:
+protected:
 	List<T>& list;
 	typename List<T>::Link* current;
 };

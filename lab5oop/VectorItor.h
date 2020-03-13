@@ -12,9 +12,11 @@ public:
 	T* next() override;
 	bool end() const;
 
+	
+	
 	virtual T& operator*();
 
-private:
+protected:
 	Vector<T>& elements;
 	size_t index;
 };

@@ -13,7 +13,7 @@ public:
 	
 	virtual T& operator*();
 
-private:
+protected:
 	List<T>& list;
 	typename List<T>::Link* current;
 };
