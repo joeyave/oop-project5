@@ -1,16 +1,5 @@
-#include "Vector.h"
-#include "List.h"
-#include "VectorItor.h"
-#include "ListItor.h"
-
+#include "Iterators.h"
 #include <iostream>
-#include <list>
-#include "ReverseVectorItor.h"
-#include "ReverseListItor.h"
-#include "ConstReverseListItor.h"
-#include "ConstReverseVectorItor.h"
-#include "ConstListItor.h"
-#include "ConstVectorItor.h"
 
 template<class T>
 void vector_itor_test(Vector<T>& vector);

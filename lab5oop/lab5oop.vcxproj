@@ -165,6 +165,7 @@
     <ClInclude Include="ConstReverseListItor.h" />
     <ClInclude Include="ConstReverseVectorItor.h" />
     <ClInclude Include="ConstVectorItor.h" />
+    <ClInclude Include="Iterators.h" />
     <ClInclude Include="Itor.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="ListItor.h" />
